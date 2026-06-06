@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Expand-Archive -Path \"conte-me!.zip\" -DestinationPath \".\\\\zip_extract_temp\" -Force)",
+      "PowerShell(node --version)",
+      "PowerShell(npm --version)",
+      "PowerShell(npm install -g bun)",
+      "PowerShell(npm install -g bun --strict-ssl=false)",
+      "PowerShell(bun --version)",
+      "PowerShell($env:NODE_TLS_REJECT_UNAUTHORIZED = \"0\"; cd \"f:\\\\Suzie 1\\\\Downloads\\\\conte-me-historinhas-infantis\"; bun install)",
+      "PowerShell($env:NODE_TLS_REJECT_UNAUTHORIZED=\"0\"; cd \"f:\\\\Suzie 1\\\\Downloads\\\\conte-me-historinhas-infantis\"; bun dev)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "PowerShell(netstat -ano)",
+      "PowerShell(Get-Command chromium, chromium-browser, chrome, \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\" -ErrorAction SilentlyContinue)",
+      "PowerShell($env:NODE_TLS_REJECT_UNAUTHORIZED=\"0\"; npm install -g playwright --strict-ssl=false 2>&1 | Select-Object -Last 5)",
+      "PowerShell($env:NODE_TLS_REJECT_UNAUTHORIZED=\"0\"; npx playwright install chromium --with-deps 2>&1 | Select-Object -Last 8)",
+      "PowerShell($env:NODE_TLS_REJECT_UNAUTHORIZED=\"0\"; npx playwright install chromium 2>&1 | Select-Object -Last 5)",
+      "PowerShell($env:NODE_TLS_REJECT_UNAUTHORIZED=\"0\"; node \"C:\\\\Users\\\\suzie\\\\AppData\\\\Local\\\\Temp\\\\test-auth.mjs\" 2>&1)",
+      "PowerShell($global = npm root -g; Write-Host $global; Test-Path \"$global\\\\playwright\")",
+      "PowerShell($env:NODE_TLS_REJECT_UNAUTHORIZED=\"0\"; node \"C:\\\\Users\\\\suzie\\\\AppData\\\\Local\\\\Temp\\\\test-auth.cjs\" 2>&1)",
+      "PowerShell($env:NODE_TLS_REJECT_UNAUTHORIZED=\"0\"; node \"C:\\\\Users\\\\suzie\\\\AppData\\\\Local\\\\Temp\\\\test-logout.cjs\" 2>&1)"
+    ]
+  }
+}
