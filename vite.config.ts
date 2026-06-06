@@ -6,5 +6,6 @@ export default defineConfig({
   },
   nitro: {
     preset: "vercel",
+    serveStatic: true,
   },
 });
