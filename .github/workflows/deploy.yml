@@ -13,7 +13,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - uses: oven-sh/setup-bun@v2
         with:
@@ -30,5 +30,13 @@ jobs:
           SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
 
+      - name: Check build output
+        if: always()
+        run: |
+          echo "=== .vercel/output ==="
+          ls -la .vercel/output/ 2>/dev/null || echo "NOT FOUND"
+          echo "=== dist/ ==="
+          ls -la dist/ 2>/dev/null || echo "NOT FOUND"
+
       - name: Deploy to Vercel
-        run: npx vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: bunx vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
